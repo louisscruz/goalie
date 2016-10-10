@@ -1,0 +1,18 @@
+<% action = user.persisted? ? user_url(user) : users_url %>
+
+<form action="<%= action %>" method="post">
+  <%= auth_form %>
+  <% if user.persisted? %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+
+  <section>
+    <label for="name">Username</label>
+    <input type="text" name="user[name]" value="<%= user.name %>" id="name">
+  </section>
+  <section>
+    <label for="password">Password</label>
+    <input type="text" name="user[password]" value="" id="password">
+  </section>
+  <button><%= user.persisted? ? "Update User" : "Sign Up" %></button>
+</form>
