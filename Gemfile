@@ -36,13 +36,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'spring'
+  gem 'launchy'
 end
 
 group :test do
   gem 'faker'
   gem 'capybara'
   # gem 'guard-rspec'
-  gem 'launchy'
   gem 'shoulda-matchers'
   gem 'bcrypt', '~> 3.1.7'
 end

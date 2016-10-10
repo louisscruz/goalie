@@ -1,0 +1,18 @@
+<h1 class="text-xs-center">Sign In</h1>
+
+<form action="<%= session_url %>" method="post">
+  <%= auth_form %>
+
+  <section class="form-group">
+    <label for="name" class="form-control-label">Username</label>
+    <input type="text" name="user[name]" id="name" class="form-control">
+  </section>
+
+  <section class="form-group">
+    <label for="password" class="form-control-label">Password</label>
+    <input type="password" name="user[password]" id="password" class="form-control">
+  </section>
+
+  <button class="btn btn-primary btn-block">Sign In</button>
+
+</form>
