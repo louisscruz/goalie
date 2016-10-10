@@ -1,0 +1,10 @@
+<% action = goal.persisted? ? goal_url(goal) : goals_url %>
+
+<form action="<%= action %>" method="post">
+  <%= auth_form %>
+
+  <section>
+    <input type="text" name="name" value>
+  </section>
+
+</form>

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   validates :name, :password_digest, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :goals
+
   attr_reader :password
 
   def self.generate_session_token

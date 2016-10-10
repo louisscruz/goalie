@@ -48,14 +48,13 @@ feature "logging out" do
     expect(page).not_to have_content("Sign Out")
   end
 
-  scenario "doesn't show username on the homepage after logout" do
-    visit new_session_url
-    fill_in "name", with: User.last.name
-    fill_in "password", with: "testtest"
-    click_on "Sign In"
-    expect(page).to have_content("Sign Out")
-    click_on "Sign Out"
-    expect(page).not_to have_content("Sign Out")
-  end
+  # scenario "doesn't show username on the homepage after logout" do
+  #   visit new_session_url
+  #   fill_in "name", with: User.last.name
+  #   fill_in "password", with: "testtest"
+  #   click_on "Log In"
+  #   click_on "Log Out"
+  #   expect(page).not_to have_content("Log In")
+  # end
 
 end
